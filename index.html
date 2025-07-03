@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Biyoloji | Anasayfa</title> <!-- Web Sitesi Sekme Yazısı -->
+    <link rel="icon" href="img/site icon.avif" type="image/x-icon">  <!-- Web Sitesi Sekme İkonu -->
+
+    <script src="https://kit.fontawesome.com/b055611ad2.js" crossorigin="anonymous"></script>     <!-- İkon Adres -->
+
+    <link rel="stylesheet" href="style.css">  <!-- Dahili Css Kodları-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"> <!-- Swiper Adresi Css-->
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script> <!-- Swiper Adresi Js-->
+   
+    <!-- dr biyo channel id UCY7Nh-CV3qqaWTxldlG4RCA-->
+</head>
+<body>
+    <header>
+        <input type="checkbox" id="nav-toggle">
+        <label for="nav-toggle" class="hamburger">
+            <div class="hamburger-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+            </div>
+            <div class="hamburger-text">Menu</div> 
+        </label>
+        <nav class="nav-menu">
+            <a class="nav-item nav-item-active" href="index.html">Anasayfa</a>
+            <a class="nav-item" href="ekibimiz.html">Ekibimiz</a>
+            <a class="nav-item" href="derskaynakları.html">Ders Kaynakları</a>
+            <a class="nav-item" href="hakkımda.html">Hakkımda</a>
+            <a class="nav-item" href="iletisim.html">İletişim</a>
+        </nav>
+    </header>
+    <!-- Gece Modu Switch'i  -->
+    <label class="darkmode-switch" title="Gece Modu"> 
+        <input type="checkbox" id="darkModeToggle">
+        <span class="darkmode-elips"></span>
+        <div class="darkmode-moon"><i class="fa-solid fa-sun"></i></div>
+        <div class="darkmode-sun"><i class="fa-solid fa-moon"></i></div>
+    </label>
+
+    <!-- Yukarı Kaydırma Butonu-->
+    <button onclick="topFunction()" id="back-to-top-button" title="Yukarı Çık"><i class="fa-solid fa-arrow-up"></i></button>
+    
+    <section class="content-section">
+         <section class="swiper-section">
+           <div class="swiper banner-swiper-section">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide banner-swiper-box"> <a href="https://www.youtube.com/c/BARI%C5%9EHOCAB%C4%B0YOLOJ%C4%B0" target="_blank">Hadi gelin birlikte öğrenelim...</a></div>
+                    <div class="swiper-slide banner-swiper-box"><h6>“Eğitim özgürlüğün altın kapısını açan anahtardır.”</h6> <br> <p>George Washington Carver</p></div>
+                </div>
+            </div> 
+            <div class="swiper ad-swiper-section">
+                <h1>Duyurular</h1>
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide ad-swiper-box">
+                        <img src="img/TYT BANNER.jpeg" alt="tyt Banner">
+                    </div>
+                    <div class="swiper-slide ad-swiper-box">
+                        <img src="img/AYT BANNER.jpeg" alt="ayt banner">
+                    </div>
+                    <div class="swiper-slide ad-swiper-box">
+                        <h1>TYT Biyoloji Kampı Yenilendi !</h1>
+                        <div class="ad-swiper-box-content">
+                           
+                            <p> Sevgili Gençler, <br>
+                                TYT Biyoloji kampımız başlamıştır. Kampımızın içeriği şu şekilde olacaktır: <br>
+                               • Video derslerimizin sonunda ufak bir checkpoint olacak ve kamp bitiminde tüm checkpointler tek videoda toplanacaktır. <br>
+                                • Ders içinde tuttuğumuz notların tamamı özetleyeciğimiz bir canlı yayın. <br>
+                                • Sonra deneme çözümleri ve soru cevap programları kara tahta serisine başlanackatır. <br>
+                                kampta görüşmek üzere... <br>
+                                • Kaynaklar için bu linke: <a href="derskaynakları.html"> <b>Ders Kaynakları</b> </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+    <!-- Footer -->
+    <footer>
+        <a href="https://www.drbiyoloji.com/">www.drbiyoloji.com</a>
+        <p>© 2025 Tüm Hakları Saklıdır</p>
+    </footer>
+    <script src="main.js"></script>
+    <script>
+        let adswiper = new Swiper(".ad-swiper-section", {
+            slidesPerView: 1,
+            spaceBetween: 0,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            autoplay: {
+                delay: 15000,
+            }
+        })
+        let bannerswiper = new Swiper(".banner-swiper-section", {
+            slidesPerView: 1,
+            spaceBetween: 0,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            autoplay: {
+                delay: 5000,
+            }
+        })
+        var swiperwrapper = document.querySelector('.swiper-wrapper');
+
+        swiperwrapper.addEventListener('mouseenter', function () {
+            bannerswiper.autoplay.stop();
+            adswiper.autoplay.stop();
+        });
+        swiperwrapper.addEventListener('mouseleave', function () {
+            bannerswiper.autoplay.start();
+            adswiper.autoplay.start();
+        });
+    </script>
+</body>
+</html>

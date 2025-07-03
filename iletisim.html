@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Biyoloji | Hakkımda</title> <!-- Web Sitesi Sekme Yazısı -->
+    <link rel="icon" href="img/site icon.avif" type="image/x-icon">  <!-- Web Sitesi Sekme İkonu -->
+
+    <script src="https://kit.fontawesome.com/b055611ad2.js" crossorigin="anonymous"></script>     <!-- İkon Adres -->
+
+    <link rel="stylesheet" href="style.css">  <!-- Dahili Css Kodları-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"> <!-- Swiper Adresi Css-->
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script> <!-- Swiper Adresi Js-->
+   
+    <!-- dr biyo channel id UCY7Nh-CV3qqaWTxldlG4RCA-->
+</head>
+<body style="display: flex; flex-direction:column ;" onselectstart="return false" ondragstart="return false">
+    <header>
+        <input type="checkbox" id="nav-toggle">
+        <label for="nav-toggle" class="hamburger">
+            <div class="hamburger-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+            </div>
+            <div class="hamburger-text">Menu</div> 
+        </label>
+        <nav class="nav-menu">
+            <a class="nav-item" href="index.html">Anasayfa</a>
+            <a class="nav-item" href="ekibimiz.html">Ekibimiz</a>
+            <a class="nav-item" href="derskaynakları.html">Ders Kaynakları</a>
+            <a class="nav-item" href="hakkımda.html">Hakkımda</a>
+            <a class="nav-item nav-item-active" href="iletisim.html">İletişim</a>
+        </nav>
+    </header>
+    <!-- Gece Modu Switch'i  -->
+    <label class="darkmode-switch" title="Gece Modu"> 
+        <input type="checkbox" id="darkModeToggle">
+        <span class="darkmode-elips"></span>
+        <div class="darkmode-moon"><i class="fa-solid fa-sun"></i></div>
+        <div class="darkmode-sun"><i class="fa-solid fa-moon"></i></div>
+    </label>
+
+    <!-- Yukarı Kaydırma Butonu-->
+    <button onclick="topFunction()" id="back-to-top-button" title="Yukarı Çık"><i class="fa-solid fa-arrow-up"></i></button>
+    
+    <section class="content-section">
+       <section class="contact-section">
+            <a class="contact-box icon-youtube" href="https://www.youtube.com/c/BARI%C5%9EHOCAB%C4%B0YOLOJ%C4%B0" target="_blank">
+                <i class="fa-brands fa-youtube"></i>
+                <p>Youtube</p>
+            </a>
+            <a class="contact-box icon-instagram" href="https://www.instagram.com/doktorbiyoloji_doc.teaching/?hl=tr" target="_blank">
+                <i class="fa-brands fa-instagram"></i>
+                <p>İnstagram</p>
+            </a>
+            <a class="contact-box icon-gmail" href="mailto:doktorbiyo@gmail.com">
+                <i class="fa-solid fa-envelope"></i>
+                <p>Gmail</p>
+            </a>
+            <a class="contact-box icon-twitter" href="">
+                <i class="fa-brands fa-x-twitter"></i>
+                <p>X / Twitter</p>
+            </a>
+       </section>
+    </section>
+    <!-- Footer -->
+    <footer>
+        <a href="https://www.drbiyoloji.com/">www.drbiyoloji.com</a>
+        <p>© 2025 Tüm Hakları Saklıdır</p>
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>
